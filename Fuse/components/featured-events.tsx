@@ -9,8 +9,8 @@ const featuredEvents = [
     description: "Celebrate the festival of lights with cultural performances and fireworks",
     date: "2024-11-04",
     location: "Marine Drive, Mumbai",
-    image: "/images/diwali.jpg",
-    price: "₹500",
+    image: "diwali.jpg",
+    price: "500",
   },
   {
     id: 2,
@@ -18,8 +18,8 @@ const featuredEvents = [
     description: "Join the biggest tech summit in India with industry leaders and innovators",
     date: "2024-12-10",
     location: "Bangalore International Exhibition Centre, Bangalore",
-    image: "/images/tech-summit.jpg",
-    price: "₹1500",
+    image: "corporate-businessman-giving-presentation-large-audience.jpg",
+    price: "1500",
   },
   {
     id: 3,
@@ -27,8 +27,8 @@ const featuredEvents = [
     description: "Experience the vibrant and colorful Goa Carnival with parades and music",
     date: "2024-02-22",
     location: "Panaji, Goa",
-    image: "/images/goa-carnival.jpg",
-    price: "₹1000",
+    image: "istockphoto-1212743133-1024x1024.jpg",
+    price: "1000",
   },
 ];
 

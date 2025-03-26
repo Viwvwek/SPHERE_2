@@ -9,48 +9,49 @@ import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/componen
 import { Slider } from "@/components/ui/slider";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 
-// Mock data for items
+const exchangeRate = 83; // 1 USD = 83 INR
+
 const items = [
   {
     id: 1,
     name: "Folding Chair",
-    price: 25.99,
-    image: "/images/chair.jpg",
+    price: .09,
+    image: "folding chair.jpg",
     category: "Furniture",
   },
   {
     id: 2,
     name: "Decorative Lanterns",
-    price: 15.99,
-    image: "/images/lanterns.jpg",
+    price: .9,
+    image: "decoartive lantern.jpg",
     category: "Decor",
   },
   {
     id: 3,
     name: "Event Tent",
-    price: 199.99,
-    image: "/images/tent.jpg",
+    price: 25,
+    image: "tent.jpg",
     category: "Outdoor",
   },
   {
     id: 4,
     name: "Table Cloth",
-    price: 12.99,
-    image: "/images/table-cloth.jpg",
+    price: .010,
+    image: "table cloth.jpg",
     category: "Decor",
   },
   {
     id: 5,
     name: "String Lights",
-    price: 29.99,
-    image: "/images/lights.jpg",
+    price: .99,
+    image: "string lights.jpg",
     category: "Decor",
   },
   {
     id: 6,
     name: "Portable Speaker",
-    price: 89.99,
-    image: "/images/speaker.jpg",
+    price: .7,
+    image: "portable speaker.jpg",
     category: "Electronics",
   },
 ];
@@ -103,8 +104,8 @@ export default function ExplorePage() {
             onValueChange={(value) => setPriceRange([value[0], value[1]])}
           />
           <div className="flex justify-between text-sm text-muted-foreground">
-            <span>${priceRange[0]}</span>
-            <span>${priceRange[1]}</span>
+            <span>₹{(priceRange[0] * exchangeRate).toFixed(2)}</span>
+            <span>₹{(priceRange[1] * exchangeRate).toFixed(2)}</span>
           </div>
         </div>
         <div className="flex flex-col space-y-2">
@@ -139,7 +140,7 @@ export default function ExplorePage() {
               <p className="text-muted-foreground">{item.category}</p>
             </CardContent>
             <CardFooter className="flex justify-between items-center p-4">
-              <p className="text-lg font-bold">${item.price.toFixed(2)}</p>
+              <p className="text-lg font-bold">₹{(item.price * exchangeRate).toFixed(2)}</p>
               <Button size="sm">Add to Cart</Button>
             </CardFooter>
           </Card>
