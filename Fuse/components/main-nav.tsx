@@ -6,7 +6,7 @@ import { usePathname } from "next/navigation";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { ShoppingCart } from "@/components/shopping-cart";
-import { Calendar, LogIn, Menu, Search, ShoppingBag, Sparkles, UserPlus } from "lucide-react";
+import { Package, LogIn, Menu, Search, ShoppingBag, UserPlus } from "lucide-react";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import cn from "classnames";
 
@@ -25,9 +25,9 @@ export function MainNav() {
 
   const routes = [
     {
-      href: "/events",
-      label: "Events",
-      icon: Calendar,
+      href: "/events",  // Changed from "/packages" to "/explore"
+      label: "Packages",
+      icon: Package,
     },
     {
       href: "/explore",
@@ -54,9 +54,23 @@ export function MainNav() {
       )}
     >
       <div className="container flex h-16 items-center">
-        {/* Logo */}
+        {/* Logo with SVG Sphere */}
         <Link href="/" className="mr-6 flex items-center space-x-2">
-          <Sparkles className="h-6 w-6 text-primary" />
+          <svg
+            className="h-6 w-6 text-primary"
+            viewBox="0 0 24 24"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <circle cx="12" cy="12" r="10" fill="url(#sphereGradient)" />
+            <ellipse cx="8" cy="8" rx="3" ry="2" fill="white" fillOpacity="0.3" />
+            <defs>
+              <linearGradient id="sphereGradient" x1="0" y1="0" x2="1" y2="1">
+                <stop offset="0%" stopColor="hsl(var(--primary))" />
+                <stop offset="100%" stopColor="hsl(var(--primary)/0.7)" />
+              </linearGradient>
+            </defs>
+          </svg>
           <span className="hidden font-bold sm:inline-block">SPHERE</span>
         </Link>
 
@@ -67,7 +81,7 @@ export function MainNav() {
               <Search className="absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-muted-foreground" />
               <Input
                 type="search"
-                placeholder="Search events..."
+                placeholder="Search packages..."
                 className="w-full pl-9 bg-background/50 border-primary/20 focus:border-primary"
               />
             </div>
@@ -87,8 +101,8 @@ export function MainNav() {
               >
                 <Link
                   href={route.href}
-                  target={route.href.startsWith("http") ? "_blank" : "_self"} // Open external links in new tab
-                  rel={route.href.startsWith("http") ? "noopener noreferrer" : undefined} // Security for external links
+                  target={route.href.startsWith("http") ? "_blank" : "_self"}
+                  rel={route.href.startsWith("http") ? "noopener noreferrer" : undefined}
                   className="flex items-center space-x-2"
                 >
                   <route.icon className="h-4 w-4" />
@@ -123,8 +137,8 @@ export function MainNav() {
                   >
                     <Link
                       href={route.href}
-                      target={route.href.startsWith("http") ? "_blank" : "_self"} // Open external links in new tab
-                      rel={route.href.startsWith("http") ? "noopener noreferrer" : undefined} // Security for external links
+                      target={route.href.startsWith("http") ? "_blank" : "_self"}
+                      rel={route.href.startsWith("http") ? "noopener noreferrer" : undefined}
                       className="flex items-center space-x-2"
                     >
                       <route.icon className="h-4 w-4" />

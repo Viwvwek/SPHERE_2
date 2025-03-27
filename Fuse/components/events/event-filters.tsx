@@ -16,10 +16,7 @@ export function EventFilters() {
         <CardTitle>Filters</CardTitle>
       </CardHeader>
       <CardContent className="flex flex-col gap-4">
-        <div className="flex flex-col gap-2">
-          <label className="text-sm font-medium">Date</label>
-          <Calendar mode="single" selected={date} onSelect={setDate} className="rounded-md border calendar-custom w-full" />
-        </div>
+       
         <div className="flex flex-col gap-2">
           <label className="text-sm font-medium">Location</label>
           <Select>
