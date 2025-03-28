@@ -90,7 +90,7 @@ const events: Event[] = [
     date: "2024-07-20",
     location: "Fun Zone, Trivandrum",
     price: 50000, // ₹50,000
-    image: "/placeholder.svg?height=400&width=600",
+    image: "/Birthday_bash.jpg?height=400&width=600",
   },
   {
     id: "corporate-1",
@@ -100,7 +100,7 @@ const events: Event[] = [
     date: "2024-09-10",
     location: "Convention Center, Kochi",
     price: 250000, // ₹2.5 Lakhs
-    image: "/placeholder.svg?height=400&width=600",
+    image: "/it.jpg?height=400&width=600",
     featured: true,
   },
   {
@@ -111,7 +111,7 @@ const events: Event[] = [
     date: "2024-06-25",
     location: "Grand Hall, Calicut",
     price: 75000, // ₹75,000
-    image: "/placeholder.svg?height=400&width=600",
+    image: "/college.jpg?height=400&width=600",
   },
   {
     id: "concert-1",
@@ -121,7 +121,7 @@ const events: Event[] = [
     date: "2024-07-15",
     location: "Central Park, Alleppey",
     price: 3000, // ₹3,000
-    image: "/placeholder.svg?height=400&width=600",
+    image: "/concert.jpg?height=400&width=600",
     featured: true,
   },
   {
@@ -132,7 +132,7 @@ const events: Event[] = [
     date: "2024-12-31",
     location: "Luxury Hotel, Munnar",
     price: 10000, // ₹10,000
-    image: "/placeholder.svg?height=400&width=600",
+    image: "/party.jpg?height=400&width=600",
   },
 ]
 
