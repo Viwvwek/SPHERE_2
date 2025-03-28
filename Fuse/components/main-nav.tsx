@@ -4,9 +4,7 @@ import { useState, useEffect } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { ShoppingCart } from "@/components/shopping-cart";
-import { Package, LogIn, Menu, Search, ShoppingBag, UserPlus } from "lucide-react";
+import { Package, LogIn, Menu, ShoppingBag, UserPlus } from "lucide-react";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import cn from "classnames";
 
@@ -25,7 +23,7 @@ export function MainNav() {
 
   const routes = [
     {
-      href: "/events",  // Changed from "/packages" to "/explore"
+      href: "/events",
       label: "Packages",
       icon: Package,
     },
@@ -74,19 +72,7 @@ export function MainNav() {
           <span className="hidden font-bold sm:inline-block">SPHERE</span>
         </Link>
 
-        {/* Search Bar */}
         <div className="flex flex-1 items-center justify-end space-x-4">
-          <form className="hidden lg:flex-1 lg:max-w-sm lg:flex">
-            <div className="relative w-full">
-              <Search className="absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-muted-foreground" />
-              <Input
-                type="search"
-                placeholder="Search packages..."
-                className="w-full pl-9 bg-background/50 border-primary/20 focus:border-primary"
-              />
-            </div>
-          </form>
-
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center space-x-2">
             {routes.map((route) => (
@@ -111,9 +97,6 @@ export function MainNav() {
               </Button>
             ))}
           </nav>
-
-          {/* Shopping Cart */}
-          <ShoppingCart />
 
           {/* Mobile Navigation */}
           <Sheet>

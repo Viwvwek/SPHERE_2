@@ -1,6 +1,6 @@
-import { EventsList } from "@/components/events/events-list"
-import { EventCategories } from "@/components/events/event-categories"
-import { EventFilters } from "@/components/events/event-filters"
+//import { EventsList } from "@/components/events/events-list"
+import {EventsPage2} from "@/components/events/event-categories"
+//import { EventFilters } from "@/components/events/event-filters"
 
 export default function EventsPage() {
   return (
@@ -10,12 +10,8 @@ export default function EventsPage() {
           <h1 className="text-3xl font-bold tracking-tight">All Events</h1>
           <p className="text-muted-foreground">Browse and discover amazing events for every occasion</p>
         </div>
-        <EventCategories />
-        <div className="flex flex-col gap-8 md:flex-row">
-          <EventFilters />
-          <EventsList />
+        <EventsPage2 />
         </div>
-      </div>
     </div>
   )
 }
